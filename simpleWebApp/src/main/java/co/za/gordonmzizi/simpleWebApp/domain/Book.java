@@ -10,13 +10,13 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
-    private String isbn ;
+    private String isbn;
 
     @ManyToOne
     private Publisher publisher;
 
     @ManyToMany
-    @JoinTable(name = "authour_book",joinColumns = @JoinColumn(name = "book_id"),inverseJoinColumns =@JoinColumn(name="authour_id"))
+    @JoinTable(name = "authour_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "authour_id"))
     private Set<Authour> authours = new HashSet<>();
 
     public Book() {

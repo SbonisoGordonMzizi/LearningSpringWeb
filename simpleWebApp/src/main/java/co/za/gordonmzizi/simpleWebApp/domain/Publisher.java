@@ -15,13 +15,13 @@ public class Publisher {
     private String state;
     private Integer zip;
     @OneToMany
-    @JoinColumn(name="publisher_id")
+    @JoinColumn(name = "publisher_id")
     private Set<Book> books = new HashSet<>();
 
     public Publisher() {
     }
 
-    public Publisher(String name,String addressLine1, String city, String state, Integer zip) {
+    public Publisher(String name, String addressLine1, String city, String state, Integer zip) {
         this.name = name;
         this.addressLine1 = addressLine1;
         this.city = city;

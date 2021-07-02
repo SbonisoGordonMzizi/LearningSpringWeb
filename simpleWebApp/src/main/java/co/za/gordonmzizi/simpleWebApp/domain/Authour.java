@@ -4,6 +4,7 @@ package co.za.gordonmzizi.simpleWebApp.domain;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
+
 @Entity
 public class Authour {
     @Id
@@ -12,12 +13,12 @@ public class Authour {
     private String firstName;
     private String LastName;
     @ManyToMany(mappedBy = "authours")
-    private Set<Book> books  = new HashSet<>();
+    private Set<Book> books = new HashSet<>();
 
     public Authour() {
     }
 
-    public Authour( String firstName, String lastName) {
+    public Authour(String firstName, String lastName) {
         this.firstName = firstName;
         LastName = lastName;
 
